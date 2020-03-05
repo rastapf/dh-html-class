@@ -3,7 +3,7 @@ body {
     margin: 0;
 }
 
-#header {
+header {
     position:relative;
     border-bottom: 1px solid black;
     box-shadow: 0px 2px 5px;
@@ -18,23 +18,23 @@ img, h1, ul, li {
     display: inline-block;
 }
 
-#header h1 {
+header h1 {
     font-size:18px;
     vertical-align: center;
 }
 
-#header img {
+header img {
     width: 70px;
     float:left;
 }
 
-#header .nav {
+nav {
     float:right;
     vertical-align: center;
     margin-right: 25px;
 }
 
-#header .nav li {
+nav li {
     width:120px;
     text-align: center;
 }
@@ -61,16 +61,24 @@ img, h1, ul, li {
     text-transform: uppercase;
 }
 
-#galery {
-    margin:auto;
+#gallery {
+    margin-left:5%;
 }
-/* Primeira tentativa de adicionar imagens:
+
 .images {
+    display: inline-block;
+    /* float:left; */
     width:375px;
     height: 250px;
-    float:left;
     margin:20px;
     text-align: center;
+}
+
+.images button {
+    position:relative;
+    top:200px;
+    height: 40px;
+    text-transform: uppercase;
 }
 
 #img1 {
@@ -102,4 +110,13 @@ img, h1, ul, li {
     background-image: url('../img/product-6.jpg');
     background-size:cover;
 }
-*/
+
+footer p {
+    margin:0;
+    display: block;
+    /* clear: both; */
+    padding:10px 0px;
+    background-color: #5e4a90;
+    text-align: center;
+    color:white;
+}
