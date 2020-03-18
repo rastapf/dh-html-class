@@ -9,7 +9,6 @@ body {
     flex-flow: column wrap;
     justify-content: space-between;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    /*margin: var(--header-height) 0 0 0;*/
 }
 
 a {
@@ -20,6 +19,7 @@ a:hover {
     text-decoration: underline;
 }
 
+/*Configurações do cabeçalho da página e navegação*/
 header {
     display: flex;
     justify-content: space-between;
@@ -57,6 +57,7 @@ nav li {
     text-align: center;
 }
 
+/*Configurações das propriedades dos Banners*/
 #banner {
     display: flex;
     flex-direction: column;
@@ -98,6 +99,28 @@ nav li {
     cursor:pointer;
 }
 
+#bannerAbout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 400px;
+    margin-bottom: 20px;;
+    background-image: url('../img/about-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+    font-weight:bold;
+}
+
+#bannerAbout h2 {
+    font-size: 35px;
+    text-transform: uppercase;
+    transform: translateY(50%);
+}
+
+/*Configurações do corpo principal do Home*/
 #gallery {
     margin: 0 200px;
     display: flex;
@@ -147,16 +170,7 @@ nav li {
     background-image: url('../img/product-6.jpg');
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #5e4a90;
-    color:white;
-}
-
-/*Versão instrutor */
-
+/*Configurações do corpo da página de contato*/
 #contact {
     display: flex;
     justify-content: center;
@@ -165,10 +179,6 @@ footer {
     background-size: cover;
     height:800px;
 }
-
-/*form * {
-    display:block;
-}*/
 
 form {
     display: flex;
@@ -224,4 +234,46 @@ form button {
     padding:10px 30px;
     border: none;
     border-radius:20px;
+}
+
+/*Configurações do corpo da página Sobre*/
+#About {
+    display: flex;
+    justify-content: space-around;
+}
+
+#About * {
+    margin: 20px;
+}
+
+#About h3 {
+    font-weight: bolder;
+    text-transform: capitalize;
+    font-size: 24px;
+}
+
+#Audio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 300px;
+    background-color: #f1f3f4;
+}
+
+#Audio h4 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+/*Configurações do rodapé da página*/
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #5e4a90;
+    color:white;
 }
