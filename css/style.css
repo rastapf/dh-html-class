@@ -3,27 +3,38 @@
 }
 
 body {
+    margin: 0;
+    padding: 0;
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: var(--header-height) 0 0 0;
+    /*margin: var(--header-height) 0 0 0;*/
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
     position:fixed;
     top: 0;
     height: var(--header-height);
-    width:100%;
+    width:100vw;
     background-color: white;
     border-bottom: 1px solid black;
     box-shadow: 0px 2px 5px;
     z-index:10;
-}
+ }
 
-/* #header * {
-    display: inline-block;
-}*/
-
-img, h1, ul, li {
-    display: inline-block;
+.logo {
+    display:flex;
 }
 
 header h1 {
@@ -33,23 +44,25 @@ header h1 {
 
 header img {
     width: 70px;
-    float:left;
 }
 
-nav {
-    float:right;
-    vertical-align: center;
+.nav {
+    display: flex;
     margin-right: 25px;
 }
 
 nav li {
-    width:120px;
+    list-style-type: none;
+    width:240px;
     text-align: center;
 }
 
 #banner {
-    height: 450px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 750px;
     background-image: url('../img/banner.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -69,9 +82,8 @@ nav li {
 }
 
 #banner button {
+    margin-bottom: 100px;
     background-color:white;
-    /* width:200px;
-    height:40px; */
     padding:20px;
     border:none;
     border-radius:30px;
@@ -87,31 +99,32 @@ nav li {
 }
 
 #gallery {
-    margin-left:5%;
+    margin: 0 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .images {
-    display: inline-block;
-    /* float:left; */
+    display:flex;
+    align-items: flex-end;
+    justify-content: center;
     width:375px;
     height: 250px;
     margin:20px;
-    text-align: center;
     background-size:cover;
 }
 
 .images button {
+    margin-bottom: 20px;
     background-color: white;
     border:none;
-    position:relative;
-    top:200px;
-    /*height: 40px;*/
     padding: 10px 30px;
     text-transform: uppercase;
 }
 
 #img1 {
-    background-image: url('../img/product-1.jpg');
+    background-image: url('../img/product-1.png');
 }
 
 #img2 {
@@ -134,97 +147,37 @@ nav li {
     background-image: url('../img/product-6.jpg');
 }
 
-footer p {
-    margin:0;
-    display: block;
-    /* clear: both; */
-    padding:10px 0px;
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #5e4a90;
-    text-align: center;
     color:white;
 }
-
-/* Definição das propriedades exclusivas dos formulários */
-/*#contact {
-    padding-top:100px;
-    background-image: url('../img/bg.jpg');
-    background-size: cover;
-    height:600px;
-}
-
-form {
-    position:relative;
-    margin-left:400px;;
-    background-color:rgba(255,255,255,.75);
-    width: 500px;
-    border: 2px solid #5e4a90;
-    border-radius:20px;
-}
-
-form h2 {
-    text-align:center;
-}
-
-form label {
-    margin-left: 40px;
-}
-
-
-form input, form textarea {
-    margin-left: 40px;
-    display:block;
-    width:80%;
-    height: 25px;
-    border: 2px solid #5e4a90;
-    border-radius:12px;
-}
-form textarea {
-    height: 100px;
-}
-
-form input[type="checkbox"] {
-    display: inline;
-    width:20px;
-}
-
-form label[for="npnome"] {
-    margin-left:5px;
-}
-
-form button {
-    margin: 30px;
-    background-color:#5e4a90;
-    color:white;
-    padding:10px 30px;
-    border:none;
-    border-radius:30px;
-    text-transform: uppercase;
-    font-size:20px;
-    font-weight:400;
-    position: absolute;
-    right:20px;
-} */
 
 /*Versão instrutor */
+
 #contact {
-    padding-top:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: url('../img/bg.jpg');
     background-size: cover;
-    height:600px;
+    height:800px;
 }
 
-form * {
+/*form * {
     display:block;
-}
+}*/
 
 form {
-    position:relative;
+    display: flex;
+    flex-direction: column;
     background-color:rgba(255,255,255,.7);
     border:1px solid;
     border-radius: 10px;
     width: 30%;
     padding: 20px;
-    margin: 0 auto;
 }
 
 form h2 {
@@ -246,10 +199,21 @@ form textarea {
     height: 120px;
 }
 
+#formButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form label {
+    display: flex;
+    align-items: center;
+}
+
 form input[type="checkbox"], form label[for="npnome"], form button {
+    margin: 0;
     width: auto;
-    min-width: 20px;;
-    display:inline-block;
+    min-width: 20px;
 }
 
 form button {
@@ -260,6 +224,4 @@ form button {
     padding:10px 30px;
     border: none;
     border-radius:20px;
-    position: absolute;
-    right:20px;
 }

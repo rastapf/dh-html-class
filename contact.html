@@ -10,9 +10,10 @@
     </head>
     <body>
         <header>
-            <img src="./img/logo.png" alt="Logotipo do site" width=120>
-            <h1>Landseeker</h1>
-            <!-- <h1 style="color:red">Landseeker</h1> -->
+            <section class="logo">
+                <img src="./img/logo.png" alt="Logotipo do site" width=120>
+                <h1>Landseeker</h1>
+            </section>
             <nav>
                 <ul class="nav">
                     <li><a href="./index.html">Home</a></li>
@@ -21,6 +22,7 @@
                 </ul>
             </nav>
         </header>
+
         <main id="contact">
             <form>
                 <h2>Contact Us!</h2>
@@ -30,15 +32,16 @@
                 <input type="email" id="email" name="email"><br>
                 <label for="mensagem">Mensagem</label>
                 <textarea name="mensagem" id="mensage" cols="40" rows="5"></textarea>
-                <input type="checkbox" name="npnome" id="npnome">
-                <label for="npnome">Não divulgue meus dados</label>
-                <button type="submit">Enviar</button>
-
+                <section id="formButtons">
+                    <label for="npnome"><input type="checkbox" name="npnome" id="npnome">Não divulgue meus dados</label>
+                    <button type="submit">Enviar</button>
+                </section>
             </form>
         </main>        
+
         <footer>
             <p>
-                Copyright Digital House
+                Copyright&copy; Digital House
             </p>
         </footer>
     </body>
